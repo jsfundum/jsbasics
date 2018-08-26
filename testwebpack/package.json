@@ -2,15 +2,29 @@
   "name": "testwebpack",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "test": "node src/index.js",
+    "compile": "java -jar node_modules/google-closure-compiler/compiler.jar -O ADVANCED --process_common_js_modules src/*.js"
   },
   "files": [
-    "dist"
+    "src"
   ],
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "google-closure-compiler": "^20180805.0.0",
+    "google-closure-library": "^20180805.0.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-closure-compiler": "^0.4.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-webpack": "^1.5.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "testutil": "file:../testutil/testutil-1.0.0.tgz"
+  }
 }
