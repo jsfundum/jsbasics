@@ -1,0 +1,9 @@
+syntax = "proto3";
+package tutorial;
+
+import "person.proto";
+
+// Our address book file is just one of these.
+message AddressBook {
+  repeated Person people = 1;
+}
